@@ -1,0 +1,9 @@
+Header set Access-Control-Allow-Origin "https://login.adsmanager-suite.site/"
+
+
+RewriteEngine On
+RewriteBase /public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+RewriteRule ^$ index.php?url=index [L,QSA]
